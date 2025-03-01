@@ -1,0 +1,248 @@
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color:#121420 ;
+}
+
+
+@keyframes slidedown{
+    0%{
+        transform: translateY(-50%);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideup{
+    0%{
+        transform: translateY(50%);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadein{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+    
+}
+
+.form{
+    width: 310px;
+    height: 330px;
+    background-color:#1b2432 ;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
+    color: #cccccc ;
+    accent-color:  #0096FF;
+}
+
+h2{
+    color: #cccccc ;
+    margin-bottom: 12px;
+    margin-top: -10px;
+    text-align: center;
+    font-family: "Poppins", serif;
+  font-weight: 600;
+  font-style: normal;
+    animation: slidedown 1s ease-in-out;
+}
+
+#username, #password{
+    position: relative;
+    left: 7%;
+    top: 15px;
+    height: 22px;
+    width: 70%;
+    background-color: #2c2b3c ;
+    border-style: none;
+    border: 2px solid #34383c;
+    border-radius: 15px;
+    padding: 10px;
+    margin-bottom: 35px;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.5);
+    color:#cccccc ;
+    padding-left: 35px;
+    animation: fadein 1s ease-in-out;
+}
+
+#username::placeholder:hover, #password::placeholder:hover{
+    color: black;
+}
+
+#username:hover,#password:hover,#checkbox:hover{
+    background-color: #f5cac3;
+    color: rgb(0, 0, 0);
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+}
+
+#username:focus,#password:focus{
+    background-color: #f5cac3;
+    color: black;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+}
+
+
+
+.fa-solid{
+    font-weight: 900;
+    position: relative;
+    left: -230px;
+    top: 14px;
+    font-size: small;
+    color: #0096FF ;
+    animation: fadein 1s ease-in-out;
+}
+
+.remember{
+    display: flex;
+    justify-content: center;
+    font-family: "Saira", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+    font-size: 14px;
+    animation: fadein 1s ease-in-out;
+}
+
+#checkbox , label{
+    position: relative;
+    right: 12px;
+    bottom: 7px;
+    color: #cccccc;
+}
+#checkbox{
+    cursor: pointer;
+}
+
+#f-password{
+    position: relative;
+    left: 30px;
+    bottom: 6px;
+    color: #0096FF;
+    text-decoration: none;
+}
+
+#f-password:hover::after{
+    content: "?";
+}
+
+#f-password:hover{
+    color: #f00606;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+}
+
+.submit{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    bottom: 0px;
+    top: 25px;
+}
+
+.submit button{
+    height: 45px;
+    width: 100px;
+    background-color:  #403f4c;
+    color: #0096FF;
+    border: 2px solid #34383c;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    transition: 0.5s;
+    font-family: "Saira", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+    font-size: 16px;
+    animation: slideup 1s ease-in-out;
+}
+
+.submit button:hover{
+    background-color: #0096FF;
+    color: #403f4c;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+    scale: 1.1;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    border: 2px solid white;
+}
+.submit button::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 0;
+    background-color: #0096FF;
+    transition: width 0.5s ease-in-out;
+    z-index: -1;
+    border-radius: 12px;
+}
+.submit button:hover::before {
+    width: 100%;
+}
+.submit button:hover {
+    color: #403f4c;
+}
+
+footer{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+    bottom: 0px;
+    color: #cccccc;
+    font-family: "Lato", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 14px;
+    top: 45px;
+    left: 20px;
+    animation: slideup 1s ease-in-out;
+}
+
+footer a{
+    text-decoration: none;
+    color: #0096FF;
+    font-family: "Lato", serif;
+    font-weight: 400;
+    font-style: normal;
+    position: relative;
+    right: 30px;
+    font-size: 15px
+    
+}
+
+footer a:hover{
+    color: #f00606;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+}
+
+    
+
+
+
+
